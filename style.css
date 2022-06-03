@@ -1,0 +1,170 @@
+@font-face {
+    font-family:Starjedi;
+    src: url('./fonts/Starjedi.ttf');
+}
+
+body{
+    font-family: Starjedi;
+    font-size: 16px;
+    text-align: center;
+    color: yellow;
+    background-image: url('./style/media/background/space-1164579_1280.png');
+}
+
+.flex-container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(44, 241, 136);
+  }
+  
+  .logo {
+    margin: 0 0 0 .45em;
+  }
+      .logo a {
+        color: rgb(28, 24, 22);
+      }
+  
+      .logo, .navigation {
+          list-style: none;
+      }
+  
+      .logo a, .navigation a {
+          text-decoration: none;
+          letter-spacing: .45rem;
+      }
+  
+  .navigation  {
+    display: flex;
+  }
+  
+  .navigation a {
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  
+  .navigation a:hover {
+      background: #00ace6;
+  }
+  
+  /* *********** media queries *********** */
+  @media all and (max-width: 990px) {
+    .flex-container {
+      flex-direction: column;
+    }
+    
+    .logo {
+    margin: 0;
+  }
+    
+    .navigation  {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+  
+  
+  /* ****** ****** */
+  @media all and (max-width: 600px) {
+   
+    .logo {
+      margin: .25em 0;
+      align-self: left; /* align the logo to the left side of 'flex-container' */
+  }
+    
+    .navigation {
+      flex-direction: column;
+    }
+    
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255,255,255,0.3); 
+      border-bottom: 1px solid rgba(0,0,0,0.1); 
+    }
+    
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
+
+  #about img{
+      border: 5px solid yellow;  
+      max-width: 100%;
+      height: auto;
+  }
+
+  #blog {
+    min-height: 500px;
+    margin: auto;
+    padding-top: 70px;
+}
+
+
+.masters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jedi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jedi img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    padding: 10px;
+    height: auto;
+    border: 3px solid yellow;
+}
+
+.jedi a {
+    padding: 5px;
+    min-width: 240px;
+    font-weight: bold;
+    text-align: center;
+    color: yellow;
+    text-decoration: none;
+}
+
+.jedi a:hover {
+  color: purple;
+}
+
+footer{
+  color: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem .875rem;
+
+}
+footer a{
+  color: #D6AD60;
+  font-style: italic;
+  font-weight: 700;
+  text-decoration: none;
+}
+.social img{
+  display: inline;
+  width: 1.875rem;
+  margin-right: .2rem;
+}
+.button-color{
+  filter: invert(100%) sepia(3%) saturate(7499%) hue-rotate(340deg) brightness(108%) contrast(107%);
+}
+
+@media only screen and (max-width:900px){
+  footer{
+      flex-direction: column;
+  }
+  .social{
+      padding: .8rem 0;
+  }
+}
